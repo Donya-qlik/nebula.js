@@ -8,7 +8,7 @@ const RX = new RegExp(`${defaultFilename.replace(/\./g, '\\.')}$`);
 const options = {
   config: {
     type: 'string',
-    description: 'Path to config file',
+    description: 'Path to a JavaScript config file',
     default: defaultFilename,
     alias: 'c',
   },
@@ -66,6 +66,11 @@ const options = {
     type: 'string',
     default: 'test/component',
     description: 'Path to a folder that will be used as basis when locating fixtures',
+  },
+  mfe: {
+    type: 'boolean',
+    default: false,
+    describe: 'Serves bundle to use in micro frontend',
   },
 };
 
